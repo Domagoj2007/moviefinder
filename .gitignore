@@ -101,5 +101,20 @@ ENV/
 .mypy_cache/
 
 db.sqlite3
-movie_finder/__pycache__/*
-moviefinder/__pycache__/*
+
+# Django
+
+*.egg-info
+*.pot
+*.py[co]
+.tox/
+__pycache__
+MANIFEST
+dist/
+docs/_build/
+docs/locale/
+node_modules/
+tests/coverage_html/
+tests/.coverage
+build/
+tests/report/
