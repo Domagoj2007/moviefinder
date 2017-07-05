@@ -101,3 +101,5 @@ ENV/
 .mypy_cache/
 
 db.sqlite3
+movie_finder/__pycache__/*
+moviefinder/__pycache__/*
