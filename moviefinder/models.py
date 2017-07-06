@@ -4,7 +4,9 @@ from django.db import models
 class Movie(models.Model):
 	title = models.CharField(max_length=50)
 	description = models.CharField(max_length=3000)
-	votes = models.IntegerField(default=0)
+	likes = models.IntegerField(default=0)
+	dislikes = models.IntegerField(default=0)
+	imageTitle = models.ImageField(upload_to = 'posters/', default = 'posters/None/no-img.jpg')
 
 	def __str__(self):
 		return self.title
