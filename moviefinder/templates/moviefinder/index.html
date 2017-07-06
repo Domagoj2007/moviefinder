@@ -1,16 +1,22 @@
 {% include 'moviefinder/base.html' %}
 
 {% block content %}
+{% if movies %}
 	<div class="row">
+	{% for movie in movies %}
 		  <div class="col-sm-6 col-md-4">
 			<div class="thumbnail">
-			  <img src="..." alt="...">
+			  <img src="{{ movies.imageTitle.url }}" alt="...">
 			  <div class="caption">
-				<h3>Moj film</h3>
-				<p>Detalji o mojem filmu</p>
+				<h3>{{movies.title}}</h3>
+				<p>{{movies.description}}</p>
 				<p><a href="#" class="btn btn-primary" role="button">Više informacija</a> </p>
 			  </div>
 			</div>
 		  </div>
+		 {% endfor %}
 	</div>
+	{% else %}
+		<h3>Trenutno nema filmova.</h3>
+	{% endif %}
 {% endblock content %}
