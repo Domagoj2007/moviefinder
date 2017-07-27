@@ -4,5 +4,5 @@ from .models import *
 
 # Create your views here.
 def index(request):
-	movies = Movie.objects.order_by('-vrijeme')
+	movies = Movie.objects.order_by('-id')
 	return render(request, 'moviefinder/index.html', {'movies': movies})

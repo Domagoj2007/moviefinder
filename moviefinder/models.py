@@ -6,7 +6,7 @@ class Movie(models.Model):
 	description = models.CharField(max_length=3000)
 	likes = models.IntegerField(default=0)
 	dislikes = models.IntegerField(default=0)
-	imageTitle = models.ImageField(upload_to = 'posters/', default = 'posters/None/no-img.jpg')
+	imageTitle = models.ImageField(upload_to = 'posters')
 
 	def __str__(self):
 		return self.title
