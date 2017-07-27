@@ -108,7 +108,8 @@ db.sqlite3
 *.pot
 *.py[co]
 .tox/
-__pycache__
+*/__pycache__/*
+*/migrations/*
 MANIFEST
 dist/
 docs/_build/
